@@ -1,17 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".PianoTradicional">
+    android:background="#000000">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Piano Tradicional" />
-</LinearLayout>
+    <!-- Teclas Blancas -->
+    <LinearLayout
+        android:id="@+id/white_keys_layout"
+        android:layout_width="725dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="VisualLintBounds">
+
+        <ImageButton
+            android:id="@+id/key_c"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="C - DO"
+            android:onClick="SonarDo"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/key_d"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="D - RE"
+            android:onClick="SonarRe"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/key_e"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="E - MI"
+            android:onClick="SonarMi"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/key_f"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="F - FA"
+            android:onClick="SonarFa"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/key_g"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="G - SOL"
+            android:onClick="SonarSol"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/key_a"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="A - LA"
+            android:onClick="SonarLa"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/key_b"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tecla_blanca"
+            android:contentDescription="B - SI"
+            android:onClick="SonarSi"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="390dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="VisualLintBounds">
+        <!-- Teclas Negras -->
+        <ImageButton
+            android:id="@+id/key_c_sharp"
+            android:layout_width="60dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="62dp"
+            android:background="@drawable/tecla_negra"
+            android:contentDescription="C# - DO SOSTENIDO"
+            android:onClick="SonarDoSostenido" />
+
+        <ImageButton
+            android:id="@+id/key_d_sharp"
+            android:layout_width="60dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="45dp"
+            android:background="@drawable/tecla_negra"
+            android:contentDescription="D# - RE SOSTENIDO"
+            android:onClick="SonarReSostenido"/>
+
+        <!-- No hay tecla negra entre E y F -->
+
+        <ImageButton
+            android:id="@+id/key_f_sharp"
+            android:layout_width="60dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="146dp"
+            android:background="@drawable/tecla_negra"
+            android:contentDescription="F# - FA SOSTENIDO"
+            android:onClick="SonarFaSostenido" />
+
+        <ImageButton
+            android:id="@+id/key_g_sharp"
+            android:layout_width="60dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="43dp"
+            android:background="@drawable/tecla_negra"
+            android:contentDescription="G# - SOL SOSTENIDO"
+            android:onClick="SonarSolSostenido" />
+
+        <ImageButton
+            android:id="@+id/key_a_sharp"
+            android:layout_width="60dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="43dp"
+            android:background="@drawable/tecla_negra"
+            android:contentDescription="A# - LA SOSTENIDO"
+            android:onClick="SonarLaSostenido" />
+    </LinearLayout>
+</FrameLayout>

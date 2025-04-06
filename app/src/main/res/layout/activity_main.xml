@@ -13,20 +13,20 @@
         android:id="@+id/btnPianoTradicional"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Piano Tradicional"
-        android:onClick="abrirPianoTradicional"/>
+        android:onClick="abrirPianoTradicional"
+        android:text="Piano Tradicional" />
 
     <Button
         android:id="@+id/btnPianoInfantil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Piano Infatil"
-        android:onClick="abrirPianoInfantil"/>
+        android:onClick="abrirPianoInfantil"
+        android:text="Piano Infatil" />
 
     <Button
         android:id="@+id/btnPianoInstrumentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Piano Instrumentos"
-        android:onClick="abrirPianoInstrumentos"/>
+        android:onClick="abrirPianoInstrumentos"
+        android:text="Piano Instrumentos" />
 </LinearLayout>
