@@ -26,7 +26,7 @@ public class PianoTradicional extends AppCompatActivity {
     }
 
     private void sonarSonido(String tecla) {
-        MediaPlayer sonido = null;
+        MediaPlayer sonido;
 
         switch (tecla) {
             case "DO":
@@ -70,15 +70,10 @@ public class PianoTradicional extends AppCompatActivity {
         }
 
         if (sonido != null) {
-            if (sonido.isPlaying()) {
-                sonido.stop();
-            } else {
-                try {
-                    sonido.start();
-                } catch (IllegalStateException e) {
-                    e.printStackTrace();
-                }
-            }
+            sonido.setOnCompletionListener(mp -> {
+                mp.release();
+            });
+            sonido.start();
         }
     }
 
@@ -99,8 +94,8 @@ public class PianoTradicional extends AppCompatActivity {
     }
 
     public void SonarMi(View view) {
-        sonarSonido("RE_Sostenido");
-        Toast.makeText(this, "RE Sostenido", Toast.LENGTH_SHORT).show();
+        sonarSonido("MI");
+        Toast.makeText(this, "MI", Toast.LENGTH_SHORT).show();
     }
 
     public void SonarFa(View view) {

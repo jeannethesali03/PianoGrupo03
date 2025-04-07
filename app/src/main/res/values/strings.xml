@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">PianoGrupo03</string>
+    <string name="desc_tecla_do">Tecla - DO</string>
+    <string name="desc_tecla_re">Tecla - RE</string>
+    <string name="desc_tecla_mi">Tecla - MI</string>
+    <string name="desc_tecla_fa">Tecla - FA</string>
+    <string name="desc_tecla_sol">Tecla - SOL</string>
+    <string name="desc_tecla_la">Tecla - LA</string>
+    <string name="desc_tecla_si">Tecla - SI</string>
+    <string name="desc_la_sostenido">LA SOSTENIDO</string>
+    <string name="desc_sol_sostenido">SOL SOSTENIDO</string>
+    <string name="desc_fa_sostenido">FA SOSTENIDO</string>
+    <string name="desc_re_sostenido">RE SOSTENIDO</string>
+    <string name="desc_do_sostenido">DO SOSTENIDO</string>
 </resources>

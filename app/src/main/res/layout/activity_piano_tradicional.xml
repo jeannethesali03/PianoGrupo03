@@ -6,6 +6,7 @@
     android:background="#000000">
 
     <!-- Teclas Blancas -->
+
     <LinearLayout
         android:id="@+id/white_keys_layout"
         android:layout_width="725dp"
@@ -20,8 +21,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="C - DO"
+            android:background="@drawable/tecla_blanca_do"
+            android:contentDescription="@string/desc_tecla_do"
             android:onClick="SonarDo"
             android:scaleType="fitXY" />
 
@@ -30,8 +31,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="D - RE"
+            android:background="@drawable/tecla_blanca_re"
+            android:contentDescription="@string/desc_tecla_re"
             android:onClick="SonarRe"
             android:scaleType="fitXY" />
 
@@ -40,8 +41,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="E - MI"
+            android:background="@drawable/tecla_blanca_mi"
+            android:contentDescription="@string/desc_tecla_mi"
             android:onClick="SonarMi"
             android:scaleType="fitXY" />
 
@@ -50,8 +51,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="F - FA"
+            android:background="@drawable/tecla_blanca_fa"
+            android:contentDescription="@string/desc_tecla_fa"
             android:onClick="SonarFa"
             android:scaleType="fitXY" />
 
@@ -60,8 +61,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="G - SOL"
+            android:background="@drawable/tecla_blanca_sol"
+            android:contentDescription="@string/desc_tecla_sol"
             android:onClick="SonarSol"
             android:scaleType="fitXY" />
 
@@ -70,8 +71,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="A - LA"
+            android:background="@drawable/tecla_blanca_la"
+            android:contentDescription="@string/desc_tecla_la"
             android:onClick="SonarLa"
             android:scaleType="fitXY" />
 
@@ -80,10 +81,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_blanca"
-            android:contentDescription="B - SI"
+            android:background="@drawable/tecla_blanca_si"
+            android:contentDescription="@string/desc_tecla_si"
             android:onClick="SonarSi"
             android:scaleType="fitXY" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -93,6 +95,7 @@
         android:orientation="horizontal"
         tools:ignore="VisualLintBounds">
         <!-- Teclas Negras -->
+
         <ImageButton
             android:id="@+id/key_c_sharp"
             android:layout_width="60dp"
@@ -100,7 +103,7 @@
             android:layout_gravity="top|start"
             android:layout_marginStart="62dp"
             android:background="@drawable/tecla_negra"
-            android:contentDescription="C# - DO SOSTENIDO"
+            android:contentDescription="@string/desc_do_sostenido"
             android:onClick="SonarDoSostenido" />
 
         <ImageButton
@@ -110,7 +113,7 @@
             android:layout_gravity="top|start"
             android:layout_marginStart="45dp"
             android:background="@drawable/tecla_negra"
-            android:contentDescription="D# - RE SOSTENIDO"
+            android:contentDescription="@string/desc_re_sostenido"
             android:onClick="SonarReSostenido"/>
 
         <!-- No hay tecla negra entre E y F -->
@@ -122,7 +125,7 @@
             android:layout_gravity="top|start"
             android:layout_marginStart="146dp"
             android:background="@drawable/tecla_negra"
-            android:contentDescription="F# - FA SOSTENIDO"
+            android:contentDescription="@string/desc_fa_sostenido"
             android:onClick="SonarFaSostenido" />
 
         <ImageButton
@@ -132,7 +135,7 @@
             android:layout_gravity="top|start"
             android:layout_marginStart="43dp"
             android:background="@drawable/tecla_negra"
-            android:contentDescription="G# - SOL SOSTENIDO"
+            android:contentDescription="@string/desc_sol_sostenido"
             android:onClick="SonarSolSostenido" />
 
         <ImageButton
@@ -142,7 +145,8 @@
             android:layout_gravity="top|start"
             android:layout_marginStart="43dp"
             android:background="@drawable/tecla_negra"
-            android:contentDescription="A# - LA SOSTENIDO"
+            android:contentDescription="@string/desc_la_sostenido"
             android:onClick="SonarLaSostenido" />
     </LinearLayout>
+
 </FrameLayout>
