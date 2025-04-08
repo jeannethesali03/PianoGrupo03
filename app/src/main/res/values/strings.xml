@@ -12,4 +12,12 @@
     <string name="desc_fa_sostenido">FA SOSTENIDO</string>
     <string name="desc_re_sostenido">RE SOSTENIDO</string>
     <string name="desc_do_sostenido">DO SOSTENIDO</string>
+    <string name="tecla_clarinete">Tecla - Clarinete</string>
+    <string name="tecla_acordeon">Tecla - Acordeon</string>
+    <string name="tecla_trompeta">Tecla - Trompeta</string>
+    <string name="tecla_saxofon">Tecla - Saxofon</string>
+    <string name="tecla_bateria">Tecla - Bateria</string>
+    <string name="tecla_guitarra">Tecla - Guitarra</string>
+    <string name="tecla_violin">Tecla - Violin</string>
+    <string name="tecla_arpa">Tecla - Arpa</string>
 </resources>
