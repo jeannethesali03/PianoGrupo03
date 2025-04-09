@@ -54,21 +54,18 @@ public class PianoTradicional extends AppCompatActivity {
                     switch (pianos[i]) {
                         case "Piano Tradicional": {
                             liberarRecursos();
-                            finish();
                             Intent intent = new Intent(PianoTradicional.this, PianoTradicional.class);
                             startActivity(intent);
                             break;
                         }
                         case "Piano Infantil": {
                             liberarRecursos();
-                            finish();
                             Intent intent = new Intent(PianoTradicional.this, PianoInfantil.class);
                             startActivity(intent);
                             break;
                         }
                         case "Piano de Instrumentos": {
                             liberarRecursos();
-                            finish();
                             Intent intent = new Intent(PianoTradicional.this, PianoInstrumentos.class);
                             startActivity(intent);
                             break;
@@ -85,7 +82,6 @@ public class PianoTradicional extends AppCompatActivity {
             builder3.show();
         } else if (item.getItemId() == R.id.acercaDe) {
             liberarRecursos();
-            finish();
             Intent intent = new Intent(PianoTradicional.this, AcercaDe.class);
             startActivity(intent);
         } else if (item.getItemId() == R.id.salir) {
