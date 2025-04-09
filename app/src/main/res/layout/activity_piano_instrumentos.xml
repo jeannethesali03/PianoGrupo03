@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".PianoInstrumentos">
     <!-- Teclas Blancas -->
 
@@ -24,88 +25,112 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_arpa"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_arpa"
             android:contentDescription="@string/tecla_arpa"
+            android:background="@color/black"
             android:onClick="SonarArpa"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_violin"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_violin"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_violin"
             android:contentDescription="@string/tecla_violin"
+            android:background="@color/black"
             android:onClick="SonarViolin"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_guitarra"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_guitarra"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_guitarra"
             android:contentDescription="@string/tecla_guitarra"
+            android:background="@color/black"
             android:onClick="SonarGuitarra"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_bateria"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_bateria"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_bateria"
             android:contentDescription="@string/tecla_bateria"
+            android:background="@color/black"
             android:onClick="SonarBateria"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_saxofon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_saxofon"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_saxofon"
             android:contentDescription="@string/tecla_saxofon"
+            android:background="@color/black"
             android:onClick="SonarSaxofon"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_trompeta"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_trompeta"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_trompeta"
             android:contentDescription="@string/tecla_trompeta"
+            android:background="@color/black"
             android:onClick="SonarTrompeta"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_acordeon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_acordeon"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_acordeon"
             android:contentDescription="@string/tecla_acordeon"
+            android:background="@color/black"
             android:onClick="SonarAcordeon"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
         <ImageButton
             android:id="@+id/key_clarinete"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/tecla_clarinete"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_clarinete"
             android:contentDescription="@string/tecla_clarinete"
+            android:background="@color/black"
             android:onClick="SonarClarinete"
             android:scaleType="fitXY"
-            android:layout_marginBottom="18dp"/>
+            android:layout_marginBottom="40dp"/>
 
     </LinearLayout>
 </FrameLayout>
