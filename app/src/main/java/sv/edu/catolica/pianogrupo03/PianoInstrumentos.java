@@ -11,8 +11,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class PianoInstrumentos extends AppCompatActivity {
+public class PianoInstrumentos extends PianoTradicional {
 
+    private Toast ultimoToast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,44 +67,52 @@ public class PianoInstrumentos extends AppCompatActivity {
         }
     }
 
-
+    //Metodo para evitar que queden notificaciones de Toast en cola,
+    //especialmente al salir.
+    private void mostrarToast(String mensaje) {
+        if (ultimoToast != null) {
+            ultimoToast.cancel(); // Cancela el Toast anterior
+        }
+        ultimoToast = Toast.makeText(this, mensaje, Toast.LENGTH_SHORT);
+        ultimoToast.show();
+    }
     public void SonarArpa(View view) {
         sonarSonido("ARPA");
-        Toast.makeText(this, "Arpa", Toast.LENGTH_SHORT).show();
+        mostrarToast("Arpa");
     }
 
     public void SonarViolin(View view) {
         sonarSonido("VIOLIN");
-        Toast.makeText(this, "Violin", Toast.LENGTH_SHORT).show();
+        mostrarToast("Violin");
     }
 
     public void SonarGuitarra(View view) {
         sonarSonido("GUITARRA");
-        Toast.makeText(this, "Guitarra", Toast.LENGTH_SHORT).show();
+        mostrarToast("Guitarra");
     }
 
     public void SonarBateria(View view) {
         sonarSonido("BATERIA");
-        Toast.makeText(this, "Bateria", Toast.LENGTH_SHORT).show();
+        mostrarToast("Bateria");
     }
 
     public void SonarSaxofon(View view) {
         sonarSonido("SAXOFON");
-        Toast.makeText(this, "Saxofon", Toast.LENGTH_SHORT).show();
+        mostrarToast("Saxofon");
     }
 
     public void SonarTrompeta(View view) {
         sonarSonido("TROMPETA");
-        Toast.makeText(this, "Trompeta", Toast.LENGTH_SHORT).show();
+        mostrarToast("Trompeta");
     }
 
     public void SonarAcordeon(View view) {
         sonarSonido("ACORDEON");
-        Toast.makeText(this, "Acordeon", Toast.LENGTH_SHORT).show();
+        mostrarToast("Acordeon");
     }
 
     public void SonarClarinete(View view) {
         sonarSonido("CLARINETE");
-        Toast.makeText(this, "Clarinete", Toast.LENGTH_SHORT).show();
+        mostrarToast("Clarinete");
     }
 }

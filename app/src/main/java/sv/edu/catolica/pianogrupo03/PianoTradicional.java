@@ -1,11 +1,17 @@
 package sv.edu.catolica.pianogrupo03;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -13,6 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class PianoTradicional extends AppCompatActivity {
 
+    MediaPlayer sonido;
+    private Toast ultimoToast;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +31,106 @@ public class PianoTradicional extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_principal, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (item.getItemId() == R.id.cambiarPiano) {
+            final String[] pianos = {"Piano Tradicional", "Piano Infantil", "Piano de Instrumentos"};
+            AlertDialog.Builder builder3 = new AlertDialog.Builder(this);
+            builder3.setTitle("Elige un Piano");
+            builder3.setItems(pianos, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int i) {
+                    switch (pianos[i]) {
+                        case "Piano Tradicional": {
+                            liberarRecursos();
+                            finish();
+                            Intent intent = new Intent(PianoTradicional.this, PianoTradicional.class);
+                            startActivity(intent);
+                            break;
+                        }
+                        case "Piano Infantil": {
+                            liberarRecursos();
+                            finish();
+                            Intent intent = new Intent(PianoTradicional.this, PianoInfantil.class);
+                            startActivity(intent);
+                            break;
+                        }
+                        case "Piano de Instrumentos": {
+                            liberarRecursos();
+                            finish();
+                            Intent intent = new Intent(PianoTradicional.this, PianoInstrumentos.class);
+                            startActivity(intent);
+                            break;
+                        }
+                        default:
+                            break;
+                    }
+                    Toast mensajito = Toast.makeText(getApplicationContext(),
+                            pianos[i], Toast.LENGTH_SHORT);
+                    mensajito.show();
+                }
+            });
+            builder3.create();
+            builder3.show();
+        } else if (item.getItemId() == R.id.acercaDe) {
+            liberarRecursos();
+            finish();
+            Intent intent = new Intent(PianoTradicional.this, AcercaDe.class);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.salir) {
+            // Libera recursos como MediaPlayer si están en uso
+            liberarRecursos();
+
+            // Finaliza todas las actividades
+            finishAffinity();
+
+            // Detiene el proceso de la aplicación
+            System.exit(0);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+
+    }
+
+    
+    private void liberarRecursos() {
+        if (sonido != null) {
+            try {
+                if (sonido.isPlaying() || sonido.getCurrentPosition() > 0) {
+                    sonido.stop(); // Detiene la reproducción si está activa o en cola
+                }
+                sonido.reset(); // Resetea el MediaPlayer para evitar problemas
+                sonido.release(); // Libera los recursos del MediaPlayer
+            } catch (IllegalStateException e) {
+                e.printStackTrace(); // Maneja cualquier excepción inesperada
+            } finally {
+                sonido = null; // Asegúrate de que el objeto se establezca en null
+            }
+        }
+    }
+
+    //Metodo para evitar que queden notificaciones de Toast en cola,
+    //especialmente al salir.
+    private void mostrarToast(String mensaje) {
+        if (ultimoToast != null) {
+            ultimoToast.cancel(); // Cancela el Toast anterior
+        }
+        ultimoToast = Toast.makeText(this, mensaje, Toast.LENGTH_SHORT);
+        ultimoToast.show();
+    }
     private void sonarSonido(String tecla) {
-        MediaPlayer sonido;
+
 
         switch (tecla) {
             case "DO":
@@ -80,61 +184,61 @@ public class PianoTradicional extends AppCompatActivity {
 
     public void SonarDoSostenido(View view) {
         sonarSonido("DO_Sostenido");
-        Toast.makeText(this, "Do Sostenido", Toast.LENGTH_SHORT).show();
+        mostrarToast("Do Sostenido");
     }
 
     public void SonarDo(View view) {
         sonarSonido("DO");
-        Toast.makeText(this, "Do", Toast.LENGTH_SHORT).show();
+        mostrarToast("Do");
     }
 
     public void SonarRe(View view) {
         sonarSonido("RE");
-        Toast.makeText(this, "RE", Toast.LENGTH_SHORT).show();
+        mostrarToast("RE");
     }
 
     public void SonarMi(View view) {
         sonarSonido("MI");
-        Toast.makeText(this, "MI", Toast.LENGTH_SHORT).show();
+        mostrarToast("MI");
     }
 
     public void SonarFa(View view) {
         sonarSonido("FA");
-        Toast.makeText(this, "FA", Toast.LENGTH_SHORT).show();
+        mostrarToast("FA");
     }
 
     public void SonarSol(View view) {
         sonarSonido("SOL");
-        Toast.makeText(this, "SOL", Toast.LENGTH_SHORT).show();
+        mostrarToast("SOL");
     }
 
     public void SonarLa(View view) {
         sonarSonido("LA");
-        Toast.makeText(this, "LA", Toast.LENGTH_SHORT).show();
+        mostrarToast("LA");
     }
 
     public void SonarSi(View view) {
         sonarSonido("SI");
-        Toast.makeText(this, "SI", Toast.LENGTH_SHORT).show();
+        mostrarToast("SI");
     }
 
     public void SonarReSostenido(View view) {
         sonarSonido("RE_Sostenido");
-        Toast.makeText(this, "RE Sostenido", Toast.LENGTH_SHORT).show();
+        mostrarToast("RE Sostenido");
     }
 
     public void SonarFaSostenido(View view) {
         sonarSonido("FA_Sostenido");
-        Toast.makeText(this, "FA Sostenido", Toast.LENGTH_SHORT).show();
+        mostrarToast("FA Sostenido");
     }
 
     public void SonarSolSostenido(View view) {
         sonarSonido("SOL_Sostenido");
-        Toast.makeText(this, "SOL Sostenido", Toast.LENGTH_SHORT).show();
+        mostrarToast("SOL Sostenido");
     }
 
     public void SonarLaSostenido(View view) {
         sonarSonido("LA_Sostenido");
-        Toast.makeText(this, "LA Sostenido", Toast.LENGTH_SHORT).show();
+        mostrarToast("LA Sostenido");
     }
 }

@@ -19,72 +19,79 @@
         <ImageButton
             android:id="@+id/key_c"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_do"
             android:contentDescription="@string/desc_tecla_do"
             android:onClick="SonarDo"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
         <ImageButton
             android:id="@+id/key_d"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_re"
             android:contentDescription="@string/desc_tecla_re"
             android:onClick="SonarRe"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
         <ImageButton
             android:id="@+id/key_e"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_mi"
             android:contentDescription="@string/desc_tecla_mi"
             android:onClick="SonarMi"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
         <ImageButton
             android:id="@+id/key_f"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_fa"
             android:contentDescription="@string/desc_tecla_fa"
             android:onClick="SonarFa"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
         <ImageButton
             android:id="@+id/key_g"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_sol"
             android:contentDescription="@string/desc_tecla_sol"
             android:onClick="SonarSol"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
         <ImageButton
             android:id="@+id/key_a"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_la"
             android:contentDescription="@string/desc_tecla_la"
             android:onClick="SonarLa"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
         <ImageButton
             android:id="@+id/key_b"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="361dp"
             android:layout_weight="1"
             android:background="@drawable/tecla_blanca_si"
             android:contentDescription="@string/desc_tecla_si"
             android:onClick="SonarSi"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_marginBottom="18dp"/>
 
     </LinearLayout>
 

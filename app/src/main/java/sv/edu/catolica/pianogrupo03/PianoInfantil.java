@@ -8,7 +8,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class PianoInfantil extends AppCompatActivity {
+public class PianoInfantil extends PianoTradicional {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

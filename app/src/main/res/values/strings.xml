@@ -20,4 +20,15 @@
     <string name="tecla_guitarra">Tecla - Guitarra</string>
     <string name="tecla_violin">Tecla - Violin</string>
     <string name="tecla_arpa">Tecla - Arpa</string>
+    <string name="txt_menu_opc_cambiar_tipo_de_piano">Cambiar Tipo de Piano</string>
+    <string name="txt_menu_opc_acerca_de">Acerca de…</string>
+    <string name="txt_menu_opc_salir">Salir</string>
+    <string name="txt_acerca_de_nosotros">Acerca De Nosotros</string>
+    <string name="txt_maicol">Maicol Josué Monge Santamaría</string>
+    <string name="txt_wilber">Wilber Anibal Rivas Carranza</string>
+    <string name="txt_eyleen">Eyleen Jeannethe Salinas Hernández</string>
+    <string name="img_maicol">Foto de Maicol</string>
+    <string name="img_wilber">Foto de Wilber</string>
+    <string name="img_eyleen">Foto de Eyleen</string>
+    <string name="img_logo">Logo de la App</string>
 </resources>
