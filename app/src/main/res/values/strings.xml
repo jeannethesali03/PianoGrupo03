@@ -31,4 +31,12 @@
     <string name="img_wilber">Foto de Wilber</string>
     <string name="img_eyleen">Foto de Eyleen</string>
     <string name="img_logo">Logo de la App</string>
+    <string name="tecla_del_tigre">tecla del tigre</string>
+    <string name="tecla_del_periquito">tecla del periquito</string>
+    <string name="tecla_del_perrito">tecla del perrito</string>
+    <string name="tecla_del_elefantito">tecla del elefantito</string>
+    <string name="tecla_del_gatito">tecla del gatito</string>
+    <string name="tecla_del_cuyo">tecla del cuyo</string>
+    <string name="tecla_de_la_culebra">tecla de la culebra</string>
+    <string name="tecla_del_pollito">tecla del pollito</string>
 </resources>

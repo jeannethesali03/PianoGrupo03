@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,11 +7,131 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".PianoInfantil">
+    <!-- Teclas Blancas -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Piano Infantil para Niños" />
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/key_piano_infantil"
+        android:layout_width="725dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent,VisualLintBounds">
+
+        <ImageButton
+            android:id="@+id/key_periquito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_periquito"
+            android:contentDescription="@string/tecla_del_periquito"
+            android:background="@color/black"
+            android:onClick="SonarPeriquito"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageButton
+            android:id="@+id/key_perrito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:contentDescription="@string/tecla_del_perrito"
+            android:onClick="SonarPerrito"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tecla_perrito"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/key_elefantito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_elefantito"
+            android:contentDescription="@string/tecla_del_elefantito"
+            android:background="@color/black"
+            android:onClick="SonarElefantito"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageButton
+            android:id="@+id/key_gatito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_gatito"
+            android:contentDescription="@string/tecla_del_gatito"
+            android:background="@color/black"
+            android:onClick="SonarGatito"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageButton
+            android:id="@+id/key_cuyo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_cuyo"
+            android:contentDescription="@string/tecla_del_cuyo"
+            android:background="@color/black"
+            android:onClick="SonarCuyo"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageButton
+            android:id="@+id/key_culebra"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_culebra"
+            android:contentDescription="@string/tecla_de_la_culebra"
+            android:background="@color/black"
+            android:onClick="SonarCulebra"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageButton
+            android:id="@+id/key_pollito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_pollito"
+            android:contentDescription="@string/tecla_del_pollito"
+            android:background="@color/black"
+            android:onClick="SonarPollito"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+        <ImageButton
+            android:id="@+id/key_tigrito"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/tecla_tigrito"
+            android:contentDescription="@string/tecla_del_tigre"
+            android:background="@color/black"
+            android:onClick="SonarTigrito"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="40dp"/>
+
+    </LinearLayout>
+</FrameLayout>
